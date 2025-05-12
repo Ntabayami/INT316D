@@ -22,7 +22,7 @@ public class searchStudentServlet extends HttpServlet {
         try {
             String stuno = request.getParameter("stuno");
 
-            // ✅ Validate student number: must be exactly 9 digits
+            
             if (stuno == null || !stuno.matches("\\d{9}")) {
                 throw new IllegalArgumentException("Student number must be exactly 9 digits.");
             }
@@ -33,7 +33,7 @@ public class searchStudentServlet extends HttpServlet {
             rd.forward(request, response);
 
         } catch (Exception e) {
-            e.printStackTrace(); // Log error
+            e.printStackTrace(); 
             request.setAttribute("errorMsg", "Error searching for student: " + e.getMessage());
             RequestDispatcher rd = request.getRequestDispatcher("error.jsp");
             rd.forward(request, response);
