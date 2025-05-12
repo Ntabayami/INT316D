@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import za.ac.tut.entities.StudentFacadeLocal;
 
-@WebServlet("/CountStudents")  // 🔁 Fixed the mapping to avoid conflict
+@WebServlet("/CountStudents")
 public class countServlet extends HttpServlet {
 
     @EJB
